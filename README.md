@@ -1,5 +1,7 @@
 Destini
 
+![Logo Apple](https://user-images.githubusercontent.com/99153283/212561193-e33975d7-73d8-4dec-b38e-40c1c3853bb0.png)
+
 Objetivo:
 Implementar el patrón de diseño MVC y analizar el estado de nuestra aplicación. Además, revisaremos el concepto de estructuras en Swift y las usaremos para separar el modelo del controlador.
 
