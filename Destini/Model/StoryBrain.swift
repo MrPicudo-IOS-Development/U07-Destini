@@ -18,9 +18,32 @@ struct StoryBrain {
     
     /* Métodos */
     
+    // Getter del título del objeto Story.
+    func getTitle() -> String {
+        return dataBase[storyNumber].title
+    }
+    
+    // Getter de la opción 1 del objeto Story
+    func getChoice1() -> String {
+        return dataBase[storyNumber].choice1
+    }
+    
+    // Getter de la opción 2 del objeto Story
+    func getChoice2() -> String {
+        return dataBase[storyNumber].choice2
+    }
+    
     // Método para el control de la siguiente historia mostrada
-    func nextStory(_ userChoise: String) {
-        // Code
+    mutating func nextStory(_ userChoise: String) {
+        // Guardamos el objeto actual del arreglo en una variable sencilla para utilizarla varias veces y simplificar el código.
+        let currentStory = dataBase[storyNumber]
+        // A partir de la "histori actual", vamos a comparar la variable userChoice que viene definida por el current.senderTitle! del botón que se presionó.
+        if(userChoise == currentStory.choice1) {
+            storyNumber = currentStory.choice1Destination
+        }
+        else  { // Funciona igual que: else if(userChoice == currentStory.choice2)
+            storyNumber = currentStory.choice2Destination
+        }
     }
 }
 
@@ -68,6 +91,5 @@ struct StoryBrain {
          default: return 0
      }
  }
- 
  
  */

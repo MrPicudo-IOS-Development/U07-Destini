@@ -10,7 +10,7 @@ struct Story {
     let choice2: String
     let choice2Destination: Int
     
-    /* Inicializador de la estructura */
+    /* Inicializador de la estructura, este no es necesario, si lo borramos se crea así como está, por default. */
     init(title: String, choice1: String, choice1Destination: Int, choice2: String, choice2Destination: Int) {
         self.title = title
         self.choice1 = choice1
